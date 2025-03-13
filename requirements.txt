@@ -1,0 +1,9 @@
+pydub
+numpy==1.26.4
+openai
+PyAudio
+keyboard
+requests
+paddlepaddle
+paddlespeech
+pytest-runner
