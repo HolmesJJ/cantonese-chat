@@ -119,6 +119,7 @@ def run():
         print(f"    粤语：{question['source']}")
         print(f"    普通话：{question['target']}")
         answer = get_response(question['target'])
+        answer = answer.rstrip("。") if answer.endswith("。") else answer
         print("AI：")
         print(f"    粤语：{answer}")
         tts_executor(text=answer, am=PADDLE_MODEL, lang=CANTONESE2, output=AI_AUDIO_PATH)
